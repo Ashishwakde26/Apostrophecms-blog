@@ -1,0 +1,19 @@
+<!-- modules/@apostrophe/blog-page/show.html -->
+
+{% extends data.outerLayout %}
+{% block title %}{{ data.piece.title }}{% endblock %}
+
+{% block main %}
+    <h1>{{ data.piece.title }}</h1>
+    <div>
+        <p>
+            {{ data.piece.publishedAt | date('MMMM D, YYYY') }}
+        </p>
+        <div>
+            {{ data.piece.birthday }}
+        </div>
+        {{ data.piece.subtitle }}
+        <!-- show the blog post content -->
+        {% area data.piece, 'content' %}
+    </div>
+{% endblock %}
