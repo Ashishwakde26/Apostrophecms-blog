@@ -23,12 +23,16 @@ require('apostrophe')({
     'default-page': {},
 
     '@apostrophecms/blog': {},
-
     '@apostrophecms/blog-page': {},
-
     'button-widget': {},
     'container-widget': {},
-    'Twocolumn-widget': {}
+    'Twocolumn-widget': {},
+    article: {},
+    // Tease an article on any page
+    'article-widget': {},
+    // Paginated index of articles, and with pages for individual articles
+    'article-page': {},
+    topic: {}
   },
 
   bundles: [ '@apostrophecms/blog' ]

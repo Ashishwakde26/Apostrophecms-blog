@@ -19,7 +19,7 @@ module.exports = {
                 '@apostrophecms/html': {},
                 button: {},
                 container: {},
-                Twocolumn: {}
+                Twocolumn: {},
               },
             columns: 2
             }

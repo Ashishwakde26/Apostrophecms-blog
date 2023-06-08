@@ -4,16 +4,14 @@
 {% block title %}{{ data.piece.title }}{% endblock %}
 
 {% block main %}
-    <h1>{{ data.piece.title }}</h1>
-    <div>
-        <p>
-            {{ data.piece.publishedAt | date('MMMM D, YYYY') }}
-        </p>
-        <div>
-            {{ data.piece.birthday }}
-        </div>
-        {{ data.piece.subtitle }}
+<div class="bg-container">
+    <h1 class="bg-h1">{{ data.piece.title }}</h1>
+    <div class="bg-publication-date">
+        {{ data.piece.publishedAt | date('MMMM D, YYYY') }}
+    </div>
+    <div class="bg-content">
         <!-- show the blog post content -->
         {% area data.piece, 'content' %}
     </div>
+</div>
 {% endblock %}

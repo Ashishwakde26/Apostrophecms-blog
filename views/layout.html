@@ -21,6 +21,31 @@
   <main class="bp-main">
 {% endblock %}
 
+{% block pageTitle %}
+<div class="page-title-wrapper">
+  {% set title = data.page.title %}
+  {% if data.piece %}
+    {% set title = data.piece.title %}
+  {% endif %}
+  <h1 class="page-title">{{ title }}</h1>
+  {% block subnav %}
+    {% if data.page and (not data.piece) and data.page._children.length %}
+      {% set placeheld = false %}
+      <section class="sub-nav">
+        {# Side nav: children of the current page #}
+        {% if data.page._children.length %}
+          <nav class="children">
+            {% for page in data.page._children %}
+              <a class="button button--small" href="{{ page._url }}">{{ page.title }}</a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+      </section>
+    {% endif %}
+  {% endblock %}
+</div>
+{% endblock %}
+
 {% block main %}
   {#
     Usually, your page templates in the @apostrophecms/pages module will override

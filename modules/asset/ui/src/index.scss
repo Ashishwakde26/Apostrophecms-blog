@@ -7,4 +7,26 @@
 @import './scss/_welcome';
 @import './scss/_widgets';
 @import './scss/button';
+@import './scss/_blog';
+@import './scss/article';
 
+.page-title-wrapper {
+    margin-bottom: 80px;
+  }
+  
+  h1 {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -3px;
+    text-align: center;
+    @media only screen and (max-width: 800px) {
+      font-size: 50px;
+      letter-spacing: -1px;
+    }
+    @media only screen and (max-width: 600px) {
+      font-size: 40px;
+    }
+  }

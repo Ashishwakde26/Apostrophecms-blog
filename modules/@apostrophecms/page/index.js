@@ -15,7 +15,11 @@ module.exports = {
       {
         name: '@apostrophecms/blog-page',
          label: 'Blog Page'
-      }
+      },
+      {
+        name: 'article-page',
+        label: 'Article Index'
+      },
     ]
   }
 };
