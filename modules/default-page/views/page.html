@@ -9,5 +9,40 @@
   <section class="bp-content">
     <h1>{{ data.page.title }}</h1>
     {% area data.page, 'main' %}
+
+    {{ data.page.projectSlug }}
+
+    <p>
+      {% set address = data.page.contactInfo %}
+      {{ address.street }}<br />
+      {{ address.city }}, {{ address.state }}
+    </p>
+
+    {{ data.page.rating }}
+
+    {# data.page.stars is a number #}
+    Rating:
+    {% for i in range(1, data.page.stars) -%}
+      ⭐️
+    {%- endfor %}
+
+    Email: {{ data.page.workEmail }}
+
+    <ul>
+      {% for genre in data.page.genres %}
+        <li>{{ genre }}</li>
+      {% endfor %}
+    </ul>
+
+    <button style="background-color: {{ data.page.themeColor or '#639' }}">
+      Enhance
+    </button>
+
+    <button style="background-color: {{ data.page.backgroundColor or '#639' }}">
+      Enhance
+    </button>
+
+    Their birthday is {{ data.page.birthday | date('MMMM D, YYYY') }}.
+
   </section>
 {% endblock %}

@@ -28,6 +28,8 @@ require('apostrophe')({
     'container-widget': {},
     'Twocolumn-widget': {},
     article: {},
+    'test-widget': {},
+    'testing-widget': {},
     // Tease an article on any page
     'article-widget': {},
     // Paginated index of articles, and with pages for individual articles

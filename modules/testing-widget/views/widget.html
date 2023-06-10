@@ -1,0 +1,10 @@
+<ul>
+    {% for contact in data.widget.items %}
+      <span>{{ contact.title }}</span>
+
+      {% for subitem in contact.items %}
+       <li>{{subitem.gmails}}</li>
+      {% endfor %}
+
+    {% endfor %}
+</ul>

@@ -28,9 +28,7 @@ module.exports = {
     group: {
       basics: {
         label: 'Basics',
-        fields: [
-          'intro'
-        ]
+        fields: ['intro']
       }
     }
   }
