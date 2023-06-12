@@ -25,7 +25,15 @@ module.exports = {
                         }
                     }
                   }
-                }
+                },
+                main: {
+                    type: 'area',
+                    options: {
+                    widgets: {
+                            '@apostrophecms/rich-text': {}
+                          }
+                        }
+                      }
                     }
                 }
             }
